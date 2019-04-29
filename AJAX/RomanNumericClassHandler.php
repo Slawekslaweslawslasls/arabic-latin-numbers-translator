@@ -37,7 +37,6 @@ class RomanNumericClassHandler
                 $raw_num = intval($this->body);
                 while ($raw_num > 0) {
                     foreach (self::$roman_numerals as $roman => $int) {
-                        //return $roman;
                         if ($raw_num >= $int) {
                             $raw_num -= $int;
                             $returnValue .= $roman;

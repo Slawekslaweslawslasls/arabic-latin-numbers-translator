@@ -3,53 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
     <title>Тестовое задание на вакансию стажёр веб-разработчик</title>
 </head>
 <body>
+<section>
+    <div class="container">
+        <img src="./img/roman-converter.png" alt="roman converter logo" style="display:block; margin:0 auto; width:100%">
 
-    <section class="mt-5">
-        <div class="container"><header><h1 class="text-center">Конвертер римских и арабских чисел</h1></header></div>
+    </div>
 
+</section>
+<section class="mt-5"style="display:none">
+    <div class="container">
+        <header><h1 class="text-center">Конвертер римских и арабских чисел</h1></header>
+    </div>
 
-    </section>
-    <section class="mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md">
-                    <div id="input" class="form-group">
-                        <label for="FormControlTextarea"><span>Поле для ввода</span></label>
-                        <textarea placeholder="Введите римское или арабское число" class="form-control" id="FormControlTextarea" rows="3"></textarea>
-                    </div>
-                </div>
-                <div class="col-md-2">
-
-                        <button id="doEmpty" class="btn btn-danger btn-block mt-5">Очистить</button>
-                        <button id="doExchange" class="btn btn-outline-darkbtn-secondary btn-block mt-1 mb-5">Поменять</button>
-
-
-                </div>
-                <div class="col-sm-12 col-md">
-                    <div id="output" class="form-group">
-                        <label for="FormControlTextarea">Результат</label>
-                        <textarea placeholder="Результат.." class="form-control" id="FormControlTextarea" rows="3" readonly></textarea>
-                    </div>
-                    <p class="text-center" id="system-numeric"></p>
+</section>
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md">
+                <div id="input" class="form-group">
+                    <label for="FormControlTextarea"><span>Поле для ввода</span></label>
+                    <textarea placeholder="Введите римское или арабское число" class="form-control"
+                              id="FormControlTextarea" rows="5"></textarea>
                 </div>
             </div>
+            <div class="col-md-2">
+                <button id="doConvert" class="btn btn-outline-success btn-block mt-5">Перевести</button>
+                <button id="doEmpty" class="btn btn-outline-danger btn-block mt-1 mb-1">Очистить</button>
+                <button id="doExchange" class="btn btn-outline-dark  btn-block mt-1 mb-5">Поменять</button>
+
+
+            </div>
+            <div class="col-sm-12 col-md">
+                <div id="output" class="form-group">
+                    <label for="FormControlTextarea">Результат</label>
+                    <textarea placeholder="Результат.." class="form-control" id="FormControlTextarea" rows="5"
+                              readonly></textarea>
+                </div>
+                <p class="text-center" id="system-numeric"></p>
+            </div>
         </div>
-    </section>
-
-
+    </div>
+</section>
 
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 <script src="script.js"></script>
 </body>
 </html>

@@ -26,7 +26,17 @@ $(document).ready(function () {
             $('#output textarea').val(input_1);
         }
     })
-
+    //action on button "translate"
+    $('#doConvert').on("click", function () {
+        var input = $.trim($('#input textarea').val());
+        var array_response=validation(input);
+        if (input.length>0 && !array_response['status']) {
+            $('#input label').html(error_msg);
+        } else {
+            sendRequest(input,array_response['lang']);
+            $('#input label').html(initial_msg);
+        }
+    })
 
     //action when focused or typing is going on textarea
     $('#input textarea').on('focus keyup', function () {
@@ -72,6 +82,7 @@ $(document).ready(function () {
                         if (raw_input[i].match(/I|V|X|L|C|D|M/gi)) { //avoid non-latin expression
                             ok = true;
                         } else {
+                            ok = false;
                             break; //break if any non-latin letter was met
                         }
                     }
@@ -94,5 +105,4 @@ $(document).ready(function () {
         } else {
         }
     }
-
 })
