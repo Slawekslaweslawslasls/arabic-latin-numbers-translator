@@ -96,11 +96,16 @@ $(document).ready(function () {
         if (!$(raw_input).is(':empty') && !$(array_response).is(':empty')) {
             $.post(base + "/Calculator.php", {num_lang: array_response, body: raw_input})
                 .done(function (data) {
-                    $numeric_system = (array_response == 'latin') ? '<p>Латинская система счисления </p>' : '<p>Арабская система счисления </p>';
-                    $('#output textarea').val(data);
-                    $('#system-numeric').html($numeric_system);
-                    $('#input label').html(success_msg);
-                    $(".result").html(data);
+                    var done=validation(data);
+                        if(done['status']){
+                        $numeric_system = (array_response == 'latin') ? '<p>Латинская система счисления </p>' : '<p>Арабская система счисления </p>';
+                        $('#output textarea').val(data);
+                        $('#system-numeric').html($numeric_system);
+                        $('#input label').html(success_msg);
+                        $(".result").html(data);
+                        }else{
+                            $('#input label').html(error_msg);
+                        }
                 });
         } else {
         }
