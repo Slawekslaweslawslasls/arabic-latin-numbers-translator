@@ -98,7 +98,7 @@ $(document).ready(function () {
                 .done(function (data) {
                     var done=validation(data);
                         if(done['status']){
-                        $numeric_system = (array_response == 'latin') ? '<p>Латинская система счисления </p>' : '<p>Арабская система счисления </p>';
+                        $numeric_system = (array_response == 'latin') ? '<p>Латинская (римская) система счисления </p>' : '<p>Арабская система счисления </p>';
                         $('#output textarea').val(data);
                         $('#system-numeric').html($numeric_system);
                         $('#input label').html(success_msg);
