@@ -8,7 +8,7 @@ $(document).ready(function () {
     //action on button "clear"
     $('#doEmpty').on("click", function () {
         $('#input textarea, #output textarea').val('');
-
+        $('#system-numeric').empty();
     })
 
     //action when cursor pointer has left textarea
@@ -42,6 +42,7 @@ $(document).ready(function () {
     $('#input textarea').on('focus keyup', function () {
         var input = $.trim($(this).val());
         var array_response = validation(input);
+        console.log(input.length);
         if (input.length > 0 && !array_response['status']) {
             $('#input label').html(error_msg);
         } else {
@@ -103,11 +104,10 @@ $(document).ready(function () {
                         $('#system-numeric').html($numeric_system);
                         $('#input label').html(success_msg);
                         $(".result").html(data);
-                        }else{
-                            $('#input label').html(error_msg);
                         }
                 });
         } else {
+            $('#input label').html(error_msg);
         }
     }
 })

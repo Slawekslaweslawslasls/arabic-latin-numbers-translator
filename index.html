@@ -5,7 +5,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Тестовое задание на вакансию стажёр веб-разработчик</title>
+    <title>Конвертер римских и арабских чисел</title>
 </head>
 <body>
 <section>
@@ -16,7 +16,7 @@
 </section>
 <section class="mt-5" style="display:none">
     <div class="container">
-        <header><h1 class="text-center">Конвертер римских и арабских чисел</h1></header>
+        <header><h1 class="text-center">Slawek.dev - Конвертер римских и арабских чисел</h1></header>
     </div>
 </section>
 <section class="mt-5">
@@ -27,12 +27,14 @@
                     <label for="FormControlTextarea"><span>Поле для ввода</span></label>
                     <textarea placeholder="Введите римское или арабское число" class="form-control"
                               id="FormControlTextarea" rows="5"></textarea>
+                    <svg class="svg-icons" id="doExchange">
+                        <use xlink:href="./sprite/main.svg#arrows-exchange"></use>
                 </div>
             </div>
             <div class="col-md-2">
-                <button id="doConvert" class="btn btn-outline-success btn-block mt-5">Конвертировать</button>
-                <button id="doEmpty" class="btn btn-outline-danger btn-block mt-1 mb-1">Очистить</button>
-                <button id="doExchange" class="btn btn-outline-warning  btn-block mt-1 mb-5">< ---- ></button>
+                <button id="doConvert" class="btn btn-outline-success btn-block">Конвертировать</button>
+                <button id="doEmpty" class="btn btn-outline-danger btn-block">Очистить</button>
+
             </div>
             <div class="col-sm-12 col-md">
                 <div id="output" class="form-group">
@@ -45,7 +47,34 @@
         </div>
     </div>
 </section>
+<style>
+    .form-group {
+        position: relative;
+    }
+    .svg-icons{
+    width: 40px;
+    height: 30px;
+    transition: 0.2s;
+    }
+    #doExchange{
+        fill:lightgray;
+        position: absolute;
+        right: 0.4rem;
+        top: 2.2rem;
+    }
+    #doExchange:hover{
+        opacity: 0.6;
 
+    }
+    #doConvert{
+        margin-top:4rem;
+    }
+    #FormControlTextarea{
+        padding-right:3rem;
+    }
+
+
+</style>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
