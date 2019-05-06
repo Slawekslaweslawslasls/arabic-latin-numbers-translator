@@ -19,10 +19,10 @@ class RomanNumericClassHandler
     );
 
 
-    public function __construct($num_lang, $body)
+    public function __construct()
     {
-        $this->num_lang = $num_lang;
-        $this->body = $body;
+        $this->num_lang = $_POST['num_lang'];
+        $this->body = $_POST['body'];
     }
 
     /**
